@@ -36,6 +36,7 @@ fg = true
 
 while fg == true
     puts
+    puts
     puts "Bonjour et bienvenue dans notre super liste de cryptomonnaies, entre un chiffre entre 1 et 4 pour avoir la réponse à la question"
     puts "1 : La ou les crypto qui ont la plus grosse valeur."
     puts "2 : La ou les crypto qui ont la plus petite valeur."
