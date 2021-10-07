@@ -40,13 +40,13 @@ choice = gets.chomp.to_i
 
 case choice
 when 1
-    puts cryptocurrency.key("46183.20")
+    puts "La crypto avec la plus haute valeur est #{cryptocurrency.key("46183.20")}."
 when 2
-    puts cryptocurrency.key("4.5e-07")
+    puts "La crypto avec la plus faible valeyr est #{cryptocurrency.key("4.5e-07")}."
 when 3
     print under_six_thousand.keys
 when 4
-    puts cryptocurrency.key("4490.72")
+    puts "La devise la plus chère parmis celles dont le cours est inférieur à 6000 est #{cryptocurrency.key("4490.72")}."
 else
     "Le chiffre/nombre entré est incorrect, merci de réessayer"
 end

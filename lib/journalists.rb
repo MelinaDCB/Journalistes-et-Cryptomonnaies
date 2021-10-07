@@ -78,7 +78,7 @@ when 8
     
     longuest = journalists.max { |a, b| a.length <=> b.length } 
     (longuest.length+1).times do |i|
-      puts "array of #{i} : #{array_length(journalists,i)}" 
+      puts "array de #{i} charactères : #{array_length(journalists,i)}" 
       end
 else
     puts "Ton choix est incorrect, merci de réessayer."
