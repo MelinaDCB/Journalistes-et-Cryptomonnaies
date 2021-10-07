@@ -30,9 +30,7 @@ puts cryptocurrency.key(cryptocurrency.values.max)
  # Devise la plus chère parmis celle dont le cours est inférieur à 6000
  #under_six_thousand.values.map(&:to_f).each { |v| puts v if v == under_six_thousand.values.map(&:to_f).max }
  #puts cryptocurrency.key("4490.72")
-
-
-
+ puts under_six_thousand.key(under_six_thousand.values.max)
 
 
 fg = true
@@ -50,15 +48,15 @@ while fg == true
     puts
     case choice
     when 1
-        puts cryptocurrency.key("46183.20")
+        puts cryptocurrency.key(cryptocurrency.values.max)
         
     when 2
-        puts cryptocurrency.key("4.5e-07")   
+        puts cryptocurrency.key(cryptocurrency.values.min)   
     when 3
         print under_six_thousand.keys
         
     when 4
-        puts cryptocurrency.key("4490.72")
+        puts under_six_thousand.key(under_six_thousand.values.max)
         
     when 5
         fg = false
