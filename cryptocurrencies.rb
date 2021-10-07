@@ -9,23 +9,44 @@ cryptocurrency = Hash[crypto.zip values]
 
  # les cryptos avec la plus grosse valeur
 # highest_value_key = hash.each { |k,v| puts k if v == hash.values.max}
-cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).max } # return more than one if ther's a tie
+#cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).max } # return more than one if there's a tie
 # puts hash.key(hash.values.max)
-puts cryptocurrency.key("46183.20")
+#puts cryptocurrency.key("46183.20")
 # puts "Project-X"
 
 
  # Les cryptos avec la plus faible valeur
- cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).min }
+ #cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).min }
+ #puts cryptocurrency.key("5e-07")
  
  # Devise dont le cours est inférieur à 6000
  under_six_thousand = {}
  cryptocurrency.each { |k,v| under_six_thousand.store(k,v) if v.to_f < 6000}
- puts under_six_thousand.length
+ #puts under_six_thousand.length
 
 
  # Devise la plus chère parmis celle dont le cours est inférieur à 6000
- under_six_thousand.values.map(&:to_f).each { |v| puts v if v == under_six_thousand.values.map(&:to_f).max }
- puts cryptocurrency.key("4490.72")
+ #under_six_thousand.values.map(&:to_f).each { |v| puts v if v == under_six_thousand.values.map(&:to_f).max }
+ #puts cryptocurrency.key("4490.72")
 
- 
+
+puts "Bonjour et bienvenue dans notre super liste de cryptomonnaies, entre un chiffre entre 1 et 4 pour avoir la réponse à la question"
+puts "1 : La ou les crypto qui ont la plus grosse valeur."
+puts "2 : La ou les crypto qui ont la plus petite valeur."
+puts "3 : Les devises dont le cours est inférieur à 6000"
+puts "4 : La devise la plus chère parmi celles dont le cours est inférieur à 6000."
+print "> "
+choice = gets.chomp.to_i
+
+case choice
+when 1
+    puts cryptocurrency.key("46183.20")
+when 2
+    puts cryptocurrency.key("4.5e-07")
+when 3
+    print under_six_thousand.keys
+when 4
+    puts cryptocurrency.key("4490.72")
+else
+    "Le chiffre/nombre entré est incorrect, merci de réessayer"
+end
