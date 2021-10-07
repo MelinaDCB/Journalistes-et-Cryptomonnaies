@@ -10,11 +10,11 @@ cryptocurrency = Hash[crypto.zip values]
 
  # les cryptos avec la plus grosse valeur
 
-highest_value_key = hash.each { |k,v| puts k if v == hash.values.max}
-cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).max } # return more than one if there's a tie
-puts hash.key(hash.values.max)
-puts cryptocurrency.key("46183.20")
-puts "Project-X"
+# highest_value_key = hash.each { |k,v| puts k if v == hash.values.max}
+# cryptocurrency.values.map(&:to_f).each { |v| puts v if v == cryptocurrency.values.map(&:to_f).max } # return more than one if there's a tie
+# puts hash.key(hash.values.max)
+# puts cryptocurrency.key("46183.20")
+# puts "Project-X"
 
 
  # Les cryptos avec la plus faible valeur

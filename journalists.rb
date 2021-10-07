@@ -41,45 +41,48 @@ longuest = journalists.max { |a, b| a.length <=> b.length }
   #puts "array of #{i} : #{array_length(journalists,i)}" 
   end
 
-
-puts "Bonjour et bienvenue dans notre liste de journalistes, entrez un chiffre entre 1 et 8 pour avoir la réponse à la question :"
-puts "1 : Nombre d'handle"
-puts "2 : Handle le plus court" 
-puts "3 : Nombre d'handle de 5 carctères"
-puts "4 : Nombre d'handle commençant par une majuscule"
-puts "5 : Liste des handle par ordre alphabétique"
-puts "6 : Liste par taille"
-puts "7 : Position dans l'array de @epenser"
-puts "8 : Répartition des handle par taille"
-print "> "
-choice = gets.chomp.to_i
-    
-case choice
-when 1
-    puts "Il y a #{journalists.length} handle dans cet array."
-when 2
-    puts "Le handle le plus court est #{shortest}."
-when 3
-    puts "Le nombre de handle contenant 5 charactères, sans compter le @, est de #{five_count}. "
-when 4
-    puts "Le nombre de handle commençant par une majuscule est : #{maj_count}. "
-when 5
-    puts sorted
-when 6
-    puts journalists_char_length
-when 7
-    puts "L'index de @epenser est #{epenser_index}. "
-when 8
-    def array_length(arr,taille)
-        bb = arr.map {|x| x.length==taille}
-        bb.delete(false)
-        return bb.length
+fg = true
+while fg === true
+    puts "Bonjour et bienvenue dans notre liste de journalistes, entrez un chiffre entre 1 et 8 pour avoir la réponse à la question :"
+    puts "1 : Nombre d'handle"
+    puts "2 : Handle le plus court" 
+    puts "3 : Nombre d'handle de 5 carctères"
+    puts "4 : Nombre d'handle commençant par une majuscule"
+    puts "5 : Liste des handle par ordre alphabétique"
+    puts "6 : Liste par taille"
+    puts "7 : Position dans l'array de @epenser"
+    puts "8 : Répartition des handle par taille"
+    puts "9 : Quitter"
+    print "> "
+    choice = gets.chomp.to_i
+        
+    case choice
+    when 1
+        puts "Il y a #{journalists.length} handle dans cet array."
+    when 2
+        puts "Le handle le plus court est #{shortest}."
+    when 3
+        puts "Le nombre de handle contenant 5 charactères, sans compter le @, est de #{five_count}. "
+    when 4
+        puts "Le nombre de handle commençant par une majuscule est : #{maj_count}. "
+    when 5
+        puts sorted
+    when 6
+        puts journalists_char_length
+    when 7
+        puts "L'index de @epenser est #{epenser_index}. "
+    when 8
+        def array_length(arr,taille)
+            bb = arr.map {|x| x.length==taille}
+            bb.delete(false)
+            return bb.length
         end
-    
-    longuest = journalists.max { |a, b| a.length <=> b.length } 
-    (longuest.length+1).times do |i|
-      puts "array of #{i} : #{array_length(journalists,i)}" 
-      end
-else
-    puts "Ton choix est incorrect, merci de réessayer."
+        longuest = journalists.max { |a, b| a.length <=> b.length } 
+        (longuest.length+1).times do |i|
+        puts "array of #{i} : #{array_length(journalists,i)}" 
+    when 9 
+        fg = false 
+    else
+        puts "Ton choix est incorrect, merci de réessayer."
+    end
 end
