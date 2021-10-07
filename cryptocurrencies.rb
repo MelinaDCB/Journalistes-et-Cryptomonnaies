@@ -8,7 +8,7 @@ values = ["6558.07", "468.95", "0.487526", "762.84", "8.86", "85.26", "0.151268"
 values = values.map(&:to_f)
 
 # Création du Hash avec zip en réunissant les deux tableaux crypto et values
-#cryptocurrency = Hash[crypto.zip values]
+cryptocurrency = Hash[crypto.zip values]
 
 
 
